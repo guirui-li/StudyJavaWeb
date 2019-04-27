@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+D:\asus\桌面\李桂瑞写的程序\JavaWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\479953630.index
+\JavawebTest\src
+D:\asus\桌面\李桂瑞写的程序\JavaWeb\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4270209627.index
+\JavawebTest\src

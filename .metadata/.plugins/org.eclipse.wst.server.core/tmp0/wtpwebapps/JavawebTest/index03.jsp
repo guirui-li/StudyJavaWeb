@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page buffer="1kb" import="java.io.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		out.clear();//清除out对象缓冲区内容
+		//
+		int count = Integer.parseInt(request.getParameter("count"));
+		for(int i=0;i<count;i++){
+			out.write("1");//通过JspWriter对象将数据输出到客户端
+		}
+		//通过PrintWriter对象将数据输出到客户端
+		PrintWriter servletOut = pageContext.getResponse().getWriter();
+		servletOut.write("使用PrintWrite对象输出数据");
+	%>
+</body>
+</html>

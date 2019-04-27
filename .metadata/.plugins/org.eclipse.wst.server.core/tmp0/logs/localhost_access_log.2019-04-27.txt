@@ -1,0 +1,13 @@
+127.0.0.1 - - [27/Apr/2019:18:24:00 +0800] "GET / HTTP/1.1" 404 1068
+0:0:0:0:0:0:0:1 - - [27/Apr/2019:18:24:06 +0800] "GET /QuweiJavaWeb/Helloworld HTTP/1.1" 200 20
+0:0:0:0:0:0:0:1 - - [27/Apr/2019:18:24:07 +0800] "GET /favicon.ico HTTP/1.1" 404 1079
+0:0:0:0:0:0:0:1 - - [27/Apr/2019:18:48:25 +0800] "GET /QuweiJavaWeb/Helloworld HTTP/1.1" 200 20
+0:0:0:0:0:0:0:1 - - [27/Apr/2019:18:48:28 +0800] "GET /QuweiJavaWeb/Helloworld HTTP/1.1" 200 20
+0:0:0:0:0:0:0:1 - - [27/Apr/2019:18:49:58 +0800] "GET /QuweiJavaWeb/Helloworld HTTP/1.1" 200 20
+0:0:0:0:0:0:0:1 - - [27/Apr/2019:18:49:59 +0800] "GET /QuweiJavaWeb/Helloworld HTTP/1.1" 200 20
+0:0:0:0:0:0:0:1 - - [27/Apr/2019:18:50:06 +0800] "GET /QuweiJavaWeb/Helloworld HTTP/1.1" 200 20
+0:0:0:0:0:0:0:1 - - [27/Apr/2019:18:50:24 +0800] "GET /QuweiJavaWeb/Helloworld HTTP/1.1" 200 20
+0:0:0:0:0:0:0:1 - - [27/Apr/2019:18:50:27 +0800] "GET /QuweiJavaWeb/Helloworld HTTP/1.1" 200 20
+0:0:0:0:0:0:0:1 - - [27/Apr/2019:18:53:05 +0800] "GET /QuweiJavaWeb/Helloworld HTTP/1.1" 200 20
+0:0:0:0:0:0:0:1 - - [27/Apr/2019:18:53:39 +0800] "GET /QuweiJavaWeb/Helloworld HTTP/1.1" 200 20
+0:0:0:0:0:0:0:1 - - [27/Apr/2019:18:53:41 +0800] "GET /QuweiJavaWeb/Helloworld HTTP/1.1" 200 20

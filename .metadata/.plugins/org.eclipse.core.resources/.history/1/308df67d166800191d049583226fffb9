@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		#form1{
+			margin-left: 200px;
+			border: 3px solid black;
+		}
+	</style>
+</head>
+<body>
+	<%
+		String name=request.getParameter("name");
+		String psw=request.getParameter("psw");
+		if(name==null||psw==null){
+			name="";
+			psw="";
+		}
+	%>
+	<form action="dologin.jsp" id="form1" name="form1" method="post">
+		<label>用户名：
+			<input type="text" name="name" value="<%=name %>"/>
+			<br><br>
+			密&nbsp;&nbsp;&nbsp;码：
+			<input type="text" name="psw" value="<%=psw %>"/>
+			<br><br>
+			<input type="submit" name="Submit" value="登录" />
+		</label>
+	</form>
+
+</body>
+</html>

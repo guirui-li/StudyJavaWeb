@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+D:\asus\桌面\李桂瑞写的程序\JavaWeb\.metadata\.plugins\org.eclipse.jdt.core
+479444978.index
+2100565282.index
+2476371982.index

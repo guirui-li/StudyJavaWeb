@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		int a=Integer.valueOf(request.getParameter("a"));
+		int b=Integer.valueOf(request.getParameter("b"));
+		int h=Integer.valueOf(request.getParameter("h"));
+	%>
+	梯形的上底是：
+	梯形的下底是：
+	梯形的高是：
+	梯形的面积是：
+</body>
+</html>

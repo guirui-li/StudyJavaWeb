@@ -1,0 +1,10 @@
+package com.guirui.demo01;
+
+public class TableBean {
+	double number1;
+	double number2;
+	double sum;
+	String select;
+	
+
+}
