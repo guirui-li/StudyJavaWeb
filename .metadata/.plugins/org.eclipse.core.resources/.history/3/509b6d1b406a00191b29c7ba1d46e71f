@@ -1,0 +1,8 @@
+package com.guirui.demo02;
+
+public class Snippet {
+	public static void main(String[] args) {
+		experiment05
+	}
+}
+

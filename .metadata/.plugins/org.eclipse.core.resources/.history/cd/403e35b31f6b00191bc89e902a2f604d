@@ -1,0 +1,63 @@
+package com.guirui.demo03;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class LoginServlet
+ */
+@WebServlet("/LoginServlet")
+public class LoginServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public LoginServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html;charset=UTF-8");
+		String pageURL="/experiment07/login.jsp";
+		
+		String name=null;
+		//new String(request.getParameter("name").getBytes("ISO8859-1"),"utf-8");
+		Customer customer=new Customer();
+		
+		if(!customer.findName(name)) {
+			String page="请输入正确的用户名";
+			request.setAttribute("page1", page);
+			request.getRequestDispatcher("/experiment07/login.jsp").forward(request, response);
+			return;
+		}else {
+			if(customer.findPsw(name)==null) {
+				String page="请输入正确的密码";
+				request.setAttribute("page2", page);
+				//response.sendRedirect("http://localhost:8080/JavawebTest/experiment07/login.jsp");
+				request.getRequestDispatcher("/experiment07/login.jsp").forward(request, response);
+				return;
+			}else {
+				request.getRequestDispatcher("/experiment07/loginSuccess.jsp").forward(request, response);
+			}
+		}
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

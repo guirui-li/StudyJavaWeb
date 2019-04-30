@@ -1,0 +1,106 @@
+package com.guirui.demo03;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class Customer {
+	private static final String forname="com.mysql.jdbc.Driver";
+	private static final String url="jdbc:mysql://localhost:3306/customer?serverTimezone=UTC";
+	private static final String username="root";
+	private static final String password="654321";
+	private String id;
+	private String name;
+	private String psw;
+	private char sex;
+	private int age;
+	
+	public Customer() {}
+	
+	public Connection getConnection(){
+		Connection con = null;
+		try {
+			Class.forName(forname);
+			con=DriverManager.getConnection(url,username,password);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		return con;
+	}
+	public String finPsw(String name){
+		Connection conn=this.getConnection();
+		PreparedStatement ps=null;
+		ResultSet rs=null;
+		String sql="select upassword from user where uname=?";
+		String pword="";
+		try {
+			ps=conn.prepareStatement(sql);
+			ps.setString(1, name);
+			rs=ps.executeQuery();
+			if(rs.next()) {
+				pword=rs.getString("password");
+			}
+			rs.close();
+			ps.close();
+			conn.close();
+		} catch (SQLException e) {
+			// TODO: handle exception
+		}
+		return pword;
+	}
+	
+	public boolean finName(String name){
+		Connection conn=this.getConnection();
+		PreparedStatement ps=null;
+		ResultSet rs=null;
+		String sql="select uname from user where uname=?";
+		try {
+			ps=conn.prepareStatement(sql);
+			ps.setString(1, name);
+			rs=ps.executeQuery();
+			
+			
+		} catch (SQLException e) {
+			// TODO: handle exception
+		}
+		
+		return false;
+	}
+	
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPsw() {
+		return psw;
+	}
+	public void setPsw(String psw) {
+		this.psw = psw;
+	}
+	public char getSex() {
+		return sex;
+	}
+	public void setSex(char sex) {
+		this.sex = sex;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+}

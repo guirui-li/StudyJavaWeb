@@ -1,0 +1,89 @@
+package com.guirui.demo4;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.guirui.demo03.Customer;
+
+/**
+ * Servlet implementation class FenyeServlet
+ */
+@WebServlet("/FenyeServlet")
+public class FenyeServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public FenyeServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html;charset=UTF-8");
+		String pageURL="/experiment08/login.jsp";
+		String name=null;
+		Customer customer=new Customer();
+		try {
+			//一定要先对从浏览器得到的数据进行编码调整
+			name=new String(request.getParameter("name").getBytes("ISO-8859-1"),"UTF-8");
+			String password=new String(request.getParameter("psw").getBytes("ISO-8859-1"),"UTF-8");
+			if(name==null||password==null) {
+				return;
+			}
+			if(name.equals("")||password.equals("")) {
+				return;
+			}
+			if(!customer.findName(name)) {
+				request.setAttribute("page1", "请输入正确的用户名");
+			}else {
+				if(customer.findPsw(name).equals(password)) {
+					pageURL="/experiment08/loginSuccess.jsp";
+					int currPage=1;
+					if(request.getParameter("page")!=null) {
+						currPage=Integer.parseInt(request.getParameter("page"));
+					}
+					Book book=new Book();
+					List<Book> list=book.findAll(currPage);
+					request.setAttribute("list", list);
+					int pages;           //
+					
+					
+					
+					
+					
+					
+					
+				}else {
+					request.setAttribute("page2", "请输入正确的密码");
+				}
+			}
+		} catch (Exception e) {}
+		finally {
+			request.setAttribute("name", name);
+			request.getRequestDispatcher(pageURL).forward(request, response);
+		}
+		
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

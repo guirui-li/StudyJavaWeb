@@ -1,0 +1,42 @@
+<%@page import="java.sql.SQLException"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test1页面</title>
+</head>
+<body>
+	
+	<%
+		Connection conn=null;
+		try{
+			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			String url= "jdbc:mysql://localhost:3306/test1";
+			String username="liguirui";
+			String psw="2398560746";
+			conn=DriverManager.getConnection(url, username, psw);
+			if(conn!=null){
+	%>
+			<h1>成功</h1>
+	<%
+				conn.close();
+			}else{
+	%>
+			<h1>失败</h1>
+	<%
+			}
+		}catch(ClassNotFoundException e){
+			e.printStackTrace();
+		}catch(SQLException e){
+			e.printStackTrace();
+	%>
+			<h1>失败</h1>
+	<%
+		}
+	%>
+</body>
+</html>

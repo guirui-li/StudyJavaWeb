@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>登录成功</title>
+	<style type="text/css">
+		#div{
+			
+		}
+	</style>
+
+</head>
+<body>
+	<div id="div">
+		欢迎<%=request %>登陆本站，您的个人信息如下
+	</div>
+</body>
+</html>

@@ -13,8 +13,7 @@ public class TableBean {
 		this.sum = sum;
 		this.select = select;
 	}
-
-
+	
 	public double getNumber1() {
 		return number1;
 	}

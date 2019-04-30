@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="E:\javax.servlet-api-3.0.1-sources\javax\servlet"/>
+		<item value="E:\javax.servlet-api-3.0.1-sources\javax"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+	</section>
+</section>

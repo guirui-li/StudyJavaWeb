@@ -55,3 +55,6 @@
 4月 27, 2019 20:42:24.88 [10116:10164:0427/204224.885:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
 4月 27, 2019 20:53:06.96 [10116:10164:0427/205306.959:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
 4月 27, 2019 21:03:49.04 [10116:10164:0427/210349.040:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+
+4月 28, 2019 14:16:45.23 NEW SESSION
+4月 28, 2019 14:16:45.23 [7632:8020:0428/141645.231:ERROR:browser_process_sub_thread.cc(209)] Waited 133 ms for network service

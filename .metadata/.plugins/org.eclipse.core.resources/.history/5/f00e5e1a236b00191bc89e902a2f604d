@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>登录成功</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		#div{
+			margin: 100px 200px;
+			
+		}
+	</style>
+
+</head>
+<body>
+	<div id="div">
+		欢迎<%=(new String(request.getParameter("name").getBytes("ISO-8859-1"),"UTF-8")).toString() %>登陆本站，您的个人信息如下
+	</div>
+</body>
+</html>

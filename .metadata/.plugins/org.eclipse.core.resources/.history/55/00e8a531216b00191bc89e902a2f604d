@@ -1,0 +1,69 @@
+package com.guirui.demo03;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class LoginServlet
+ */
+@WebServlet("/LoginServlet")
+public class LoginServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public LoginServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html;charset=UTF-8");
+		String pageURL="/experiment07/login.jsp";
+		String name=null;
+		Customer customer=new Customer();
+		try {
+			name=new String(request.getParameter("name").getBytes("ISO-8859-1"),"UTF-8");
+			String password=request.getParameter("psw");
+			if(name==null||password==null) {
+				return;
+			}
+			if(name==""||password=="") {
+				return;
+			}
+			if(!customer.findName(name)) {
+				request.setAttribute("page1", "请输入正确的用户名");
+			}else {
+				if(customer.findPsw(name)==null) {
+					request.setAttribute("page2", "请输入正确的密码");
+				}else {
+					
+				}
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}finally {
+			request.setAttribute("name", name);
+			request.getRequestDispatcher(pageURL).forward(request, response);
+		}
+		
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}
