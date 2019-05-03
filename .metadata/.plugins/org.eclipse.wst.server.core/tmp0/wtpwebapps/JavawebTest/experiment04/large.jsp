@@ -4,13 +4,29 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>to large</title>
+	<style type="text/css">
+		#div{
+			border:1px solid black;
+			width:340px;
+			height:100px;
+			background-color:#87c4ed;
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+		}
+	</style>
 </head>
 <body>
-	你猜的数比实际的数大，请小哥哥再猜！
-	<form action="result.jsp" method="post" name="form1">
-		<input type="text" name="boy">
-		<input type="submit" value="送出" name="submit">
-	</form>
+	<div id="div">
+		你猜的数比实际的数大，请小哥哥再猜！
+		<form action="result.jsp" method="post" name="form1">
+			<label>&nbsp;
+				<input type="text" name="boy">
+			</label>
+			<input type="submit" value="送出" name="submit">
+		</form>
+	</div>
 </body>
 </html>

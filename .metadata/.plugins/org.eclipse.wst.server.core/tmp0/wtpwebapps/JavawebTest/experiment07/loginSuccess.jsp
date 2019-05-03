@@ -9,11 +9,17 @@
 		body{
 			margin: 0;
 			padding: 0;
-			font-size: 20px;
 		}
 		#div{
-			margin: 100px 200px;
-			
+			font-size:19px;
+			border: 1px solid black;
+			width:400px;
+			height:150px;
+			background-color: #ffee93;
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
 		}
 	</style>
 

@@ -9,18 +9,26 @@
 		body{
 			margin: 0;
 			padding: 0;
-			color: blue;
+		}
+		label{
+			display:inline-block;	
+			width: 68px;
+			color:blue;
+			white-space: pre;
 		}
 		#form1{
-			margin: 200px 560px;
 			border: 1px solid black;
-		}
-		#psw{
-			margin-left: 2px;
+			width:250px;
+			height:120px;
+			background-color: #ffee93;
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
 		}
 		#submit{
 			margin-left: 100px;
-			background-color: red;
+			background-color: #4cb4e7;
 		}
 	</style>
 </head>
@@ -33,16 +41,12 @@
 			psw="";
 		}
 	%>
-	<form action="dologin.jsp" id="form1" name="form1" method="post">
-		<label>用户名：
-			<input type="text" name="name" value="<%=name %>"/>
-			<br><br>
-			密&nbsp;&nbsp;&nbsp;码：
-			<input type="text" name="psw" value="<%=psw %>" id="psw"/>
-			<br><br>
-			<input type="submit" name="Submit" value="登录" id="submit"/>
-		</label>
+	<form action="dologin.jsp" id="form1" method="post">
+		<label for="name">用户名：</label>
+			<input type="text" name="name" value="<%=name %>" id="name"/><br><br>
+		<label for="psw">密   码：</label>
+			<input type="text" name="psw" value="<%=psw %>" id="psw"/><br><br>
+		<input type="submit" name="Submit" value="登录" id="submit"/>
 	</form>
-
 </body>
 </html>

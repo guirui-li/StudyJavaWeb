@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>login页面</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			color: blue;
+		}
+		label{
+			width: 100px;
+			text-align: justify;
+		}
+		#form1{
+			border: 1px solid black;
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+		}
+		#submit{
+			margin-left: 100px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<%
+		String name=request.getParameter("name");
+		String psw=request.getParameter("psw");
+		if(name==null||psw==null){
+			name="";
+			psw="";
+		}
+	%>
+	<form action="dologin.jsp" id="form1" method="post">
+		<label>用户名：</label>
+			<input type="text" name="name" value="<%=name %>"/><br>
+		<label>密码：</label>
+			<input type="text" name="psw" value="<%=psw %>"/><br>
+		<input type="submit" name="Submit" value="登录" id="submit"/>
+	</form>
+</body>
+</html>

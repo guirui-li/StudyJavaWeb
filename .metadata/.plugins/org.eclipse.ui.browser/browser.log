@@ -58,3 +58,25 @@
 
 4月 28, 2019 14:16:45.23 NEW SESSION
 4月 28, 2019 14:16:45.23 [7632:8020:0428/141645.231:ERROR:browser_process_sub_thread.cc(209)] Waited 133 ms for network service
+
+5月 03, 2019 13:36:33.24 NEW SESSION
+5月 03, 2019 13:36:33.24 [4748:1664:0503/133633.244:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5月 03, 2019 13:37:35.93 [4748:1664:0503/133735.938:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5月 03, 2019 13:39:15.95 [4748:1664:0503/133915.955:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5月 03, 2019 13:41:42.08 [4748:1664:0503/134142.081:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5月 03, 2019 13:45:12.72 [4748:1664:0503/134512.722:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5月 03, 2019 13:53:18.48 [4748:1664:0503/135318.479:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5月 03, 2019 14:04:00.56 [4748:1664:0503/140400.569:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5月 03, 2019 14:11:42.05 [4748:1664:0503/141142.050:ERROR:textfield.cc(1777)] NOT IMPLEMENTED
+5月 03, 2019 14:11:43.09 [4748:1664:0503/141143.092:ERROR:prefix_selector.cc(163)] NOT IMPLEMENTED
+5月 03, 2019 14:14:42.73 [4748:1664:0503/141442.730:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5月 03, 2019 14:25:25.85 [4748:1664:0503/142525.852:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5月 03, 2019 14:36:07.98 [4748:1664:0503/143607.985:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5月 03, 2019 14:46:50.14 [4748:1664:0503/144650.140:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5月 03, 2019 14:57:32.30 [4748:1664:0503/145732.299:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5月 03, 2019 15:08:14.37 [4748:1664:0503/150814.378:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5月 03, 2019 15:18:56.52 [4748:1664:0503/151856.521:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5月 03, 2019 15:29:38.68 [4748:1664:0503/152938.681:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5月 03, 2019 15:40:20.75 [4748:1664:0503/154020.751:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5月 03, 2019 15:51:02.81 [4748:1664:0503/155102.817:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+5月 03, 2019 15:52:54.70 [4748:10748:0503/155254.700:ERROR:browser_process_sub_thread.cc(209)] Waited 344 ms for network service

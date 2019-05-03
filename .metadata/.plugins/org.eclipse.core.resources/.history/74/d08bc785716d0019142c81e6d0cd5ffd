@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>good</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<%
+		int count=((Integer)session.getAttribute("count")).intValue();
+		int num=((Integer)session.getAttribute("save")).intValue();
+		long startTime=session.getCreationTime();
+		long endTime=session.getLastAccessedTime();
+	%>
+	恭喜你，猜对了，你好棒！
+	<br>
+	您共猜了<%=count %>次
+	<br>用时<%=(endTime-startTime)/1000 %>秒
+	<br>这个数字就是<%=num %>
+	<br>您必须关掉浏览器才能获得新的数。
+</body>
+</html>

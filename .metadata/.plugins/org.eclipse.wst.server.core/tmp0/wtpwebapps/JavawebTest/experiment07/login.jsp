@@ -9,43 +9,47 @@
 		body{
 			margin: 0;
 			padding: 0;
-			color: blue;
+		}
+		label{
+			display:inline-block;	
+			width: 78px;
+			color:blue;
 		}
 		#form1{
-			margin: 200px 560px;
 			border: 1px solid black;
-		}
-		#psw{
-			margin-left: 2px;
+			width:300px;
+			height:100px;
+			background-color: #ffee93;
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
 		}
 		#submit{
-			margin-left: 100px;
-			background-color: red;
+			position:absolute;
+			bottom:0px;
+			left:125px;
+			background-color: #4cb4e7;
 		}
 		#div1{
 			color:red;
-			
 		}
 	</style>
 </head>
 <body>
 	<form action="/JavawebTest/LoginServlet" id="form1" name="form1" method="post">
-		<label>用户名：
+		<label>&nbsp;用户名：</label>
 			<input type="text" name="name" value="${requestScope.name }"/>
-			<br>
-		</label>
 			<div id="div1">
 				${requestScope.page1 }
 			</div>
-		<label>
-			密&nbsp;&nbsp;&nbsp;码：
+			
+		<label>&nbsp;密&nbsp;&nbsp;&nbsp;码：</label>
 			<input type="text" name="psw" value="${requestScope.psw }" id="psw"/>
-			<br>
-		</label>
 			<div id="div1">
 				${requestScope.page2 }
 			</div>
-			<input type="submit" name="Submit" value="登录" id="submit"/>
+		<input type="submit" name="Submit" value="登录" id="submit"/>
 	</form>
 </body>
 </html>

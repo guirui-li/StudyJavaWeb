@@ -20,6 +20,13 @@
 		#a{
 			color:red;
 		}
+		#font{
+			margin: auto;
+		}
+		#table{
+			margin:auto;
+			text-align: center;
+		}
 	</style>
 </head>
 <body>
@@ -33,8 +40,10 @@
 		欢迎<font style="color:blue"><%=name%></font>访问此网页|
 		<a href="experiment08/login.jsp">退出登录</a>
 	</div>
-	顺序取得数据第<%=pagee %>页，共<%=pages %>页<br>
-	<table border="1">
+	<div id="font">
+		&nbsp;顺序取得数据第<%=pagee %>页，共<%=pages %>页
+	</div>
+	<table border="1" id="table">
 		<caption >所有书本信息</caption>
 		<tr>
 			<th>书籍编号</th>
@@ -44,6 +53,7 @@
 			<th>价格</th>
 		</tr>
 		<%
+			@SuppressWarnings("unchecked")
 			List<Book> list=(List<Book>)request.getAttribute("list");
 			for(Book b:list){
 		%>

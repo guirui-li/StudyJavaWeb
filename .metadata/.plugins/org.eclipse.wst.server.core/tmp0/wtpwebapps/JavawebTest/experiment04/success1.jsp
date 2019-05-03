@@ -4,7 +4,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>good</title>
+	<style type="text/css">
+		#div{
+			border:1px solid black;
+			width:340px;
+			height:110px;
+			background-color:#87c4ed;
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+		}
+	</style>
 </head>
 <body>
 	<%
@@ -13,11 +25,13 @@
 		long startTime=session.getCreationTime();
 		long endTime=session.getLastAccessedTime();
 	%>
-	恭喜你，猜对了，你好棒！
-	<br>
-	您共猜了<%=count %>次
-	<br>用时<%=(endTime-startTime)/1000 %>秒
-	<br>这个数字就是<%=num %>
-	<br>您必须关掉浏览器才能获得新的数。
+	<div id="div">
+		恭喜你，猜对了，你好棒！
+		<br>
+		您共猜了<%=count %>次
+		<br>用时<%=(endTime-startTime)/1000 %>秒
+		<br>这个数字就是<%=num %>
+		<br>您必须关掉浏览器才能获得新的数。
+	</div>
 </body>
 </html>

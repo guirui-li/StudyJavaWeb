@@ -1,12 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
 	<%
 		double sum=0.0;
 		String number1str=request.getParameter("number1");
@@ -33,9 +26,6 @@
 	<jsp:forward page="jisuan.jsp">
 		<jsp:param value="<%=number1str%>" name="number1"/>
 		<jsp:param value="<%=number2str%>" name="number2"/>
+		<jsp:param value="<%=optionstr %>" name="select"/>
 		<jsp:param value="<%=sum%>" name="sum"/>
 	</jsp:forward>
-	
-	
-</body>
-</html>
